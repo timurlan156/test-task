@@ -6,9 +6,9 @@ let paragraphElement = document.getElementById('task-block__text');
 let paragraphStr = paragraphElement.innerText;
 
 function markTextWords() {
-  clearInterval(markInterval);
+  resetMarkingCounter();
   
-  markNextTextWord(paragraphStr)
+  markNextTextWord(paragraphStr);
   
   markInterval = setInterval(function () {
     markNextTextWord()
@@ -33,7 +33,11 @@ function markNextTextWord() {
   currentMarkedWordIndex++;
   
   if (currentMarkedWordIndex >= paragraphWordsArr.length) {
-    currentMarkedWordIndex = 0;
-    clearInterval(markInterval);
+    resetMarkingCounter();
   }
+}
+
+function resetMarkingCounter() {
+  clearInterval(markInterval);
+  currentMarkedWordIndex = 0;
 }
