@@ -2,10 +2,6 @@
     box-sizing: border-box;
 }
 
-html {
-    height: 100%;
-}
-
 body {
     margin: 0;
     font-family: "Open Sans", serif;
@@ -67,13 +63,13 @@ button.btn-orange {
     color: rgba(0, 0, 0, 0.7);
 }
 
-@media only screen and (min-width: 375px) and (max-width: 1023px) {
+@media only screen and (min-width: 375px) and (max-width: 1024px) {
     .task-block {
         width: 348px;
     }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1025px) {
     .task-block {
         width: 620px;
         height: 290px;
