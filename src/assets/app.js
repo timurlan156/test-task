@@ -1,4 +1,5 @@
 const INTERVAL_DELAY = 1000;
+
 const paragraphElement = document.getElementById('task-block__text');
 const paragraphStr = paragraphElement.innerText;
 
@@ -16,6 +17,7 @@ function markTextWords() {
 function markNextTextWord() {
   let paragraphWordsArr = paragraphStr.split(' ');
   
+  // Если текущий отрывок это символ вроде тире, то берется следующий отрывок
   if (!paragraphWordsArr[currentMarkedWordIndex].match(/[\wа-я]+/ig)) {
     currentMarkedWordIndex++;
     markNextTextWord();
