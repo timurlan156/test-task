@@ -10,9 +10,7 @@ function markTextWords() {
   
   markNextTextWord(paragraphStr);
   
-  markInterval = setInterval(function () {
-    markNextTextWord()
-  }, INTERVAL_DELAY);
+  markInterval = setInterval(markNextTextWord, INTERVAL_DELAY);
 }
 
 function markNextTextWord() {
