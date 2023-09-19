@@ -1,9 +1,9 @@
 const INTERVAL_DELAY = 1000;
+const paragraphElement = document.getElementById('task-block__text');
+const paragraphStr = paragraphElement.innerText;
 
 let markInterval = 0;
 let currentMarkedWordIndex = 0;
-let paragraphElement = document.getElementById('task-block__text');
-let paragraphStr = paragraphElement.innerText;
 
 function markTextWords() {
   resetMarkingCounter();
